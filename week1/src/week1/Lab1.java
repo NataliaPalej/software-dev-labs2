@@ -1,0 +1,63 @@
+package week1;
+
+import java.util.Scanner; //import  
+
+public class Lab1 {
+
+/**
+ * @author A00279259
+ * invoice app
+ */
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to the Invoice Total Calculator");
+		System.out.println(); //ctrl + spase
+		
+		Scanner in = new Scanner(System.in);
+		
+		//perform calculations until choice isnt equal to y/Y
+		String choice = "y";
+		while (choice.equalsIgnoreCase("y")) {
+			//get total from user
+			System.out.println("Enter subtotal: ");
+			double subtotal = in.nextDouble();
+						
+			//calculate discount based on subtotal
+			double discountPercent = 0.0;
+			if (subtotal >= 200)
+				discountPercent = 0.2;
+			else if (subtotal >= 100)
+				discountPercent = 0.1;
+			else discountPercent = 0.0;
+			
+			double discountAmount = subtotal * discountPercent;
+			
+			//calculate total invoice amount
+			double totalAmount = subtotal - discountAmount;
+			
+			//test if total displays correctly
+			//System.out.println("Your total is: " + total);
+			
+			//display euro sign
+			String euro = "\u20ac";
+			
+			//round discountAmount and Total to 2 decimal places
+			double discount = Math.round(discountAmount*100.0)/100.0;
+			double total = Math.round(totalAmount*100.0)/100.0;
+			
+			
+			//display invoice
+			String message = "Subtotal: " + euro + subtotal + "\n" + "Discount percent: " + discountPercent*100 + "%" + "\n" + "Discount amount: " + euro + discount + "\n" + "Invoice total: " + euro + total;
+			System.out.println(message);
+			
+			System.out.println("Do you want to continue? (y/n): ");
+			choice = in.next();
+			
+				
+		}
+		
+	}
+
+}
+
