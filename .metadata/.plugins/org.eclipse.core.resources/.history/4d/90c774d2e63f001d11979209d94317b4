@@ -1,0 +1,46 @@
+package week1;
+import java.util.Scanner;
+
+public class Lab1_Q2 {
+public static void main(String[] args) {
+		
+		//System.out.println("Did Oswald act alone? (true/false): ");
+		//didOswaldActAlone();
+		
+		System.out.println("Do you want to know what's my favourite movie? (y/n): ");
+		Scanner sc = new Scanner(System.in);
+		String ans = sc.next();
+		String film = favouriteFilm();
+		
+		//do loop 
+		if (ans.equalsIgnoreCase("y")){
+			System.out.println("My favourite movie is " + film);
+		}
+		else if (ans.equalsIgnoreCase("n")){
+			System.out.println("Maybe next time :(");
+		}
+		else{
+			System.out.println("Please enter \"y\" or \"n\"");
+			ans = sc.next();
+		}
+	}
+	
+	//creating method that returns true/false 
+	public static boolean didOswaldActAlone() {
+		//creating scanner object
+		Scanner in = new Scanner(System.in);
+		boolean choice = in.nextBoolean();
+		if (choice == true) {
+			 System.out.println("Yes, Oswald acted alone.");
+		}
+		else{
+			 System.out.println("No, Oswald did not act alone");
+		}
+		return choice'
+	}
+	
+	//creating method that returns favourite movie
+	public static String favouriteFilm(){
+		return "Titanic";
+	}
+}

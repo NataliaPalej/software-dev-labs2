@@ -1,0 +1,28 @@
+package agile;
+
+import java.util.Scanner;
+
+public class Agile_Rectangle {
+
+	public static void main(String[] args) {
+		Rectangle();
+		
+	}
+	
+	public static void Rectangle(){
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter horizontal length: ");
+		int a = sc.nextInt();
+		for (int i = 0; i > a; i++){
+			System.out.print("*");
+		}
+			
+		System.out.println("Enter vertical length: ");
+		int b = sc.nextInt();
+		for (int i = 0; i > b; i++){
+			System.out.println("*");
+		}
+	}
+
+}

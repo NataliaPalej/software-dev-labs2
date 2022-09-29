@@ -1,20 +1,3 @@
 INDEX VERSION 1.129+C:\Users\Natalia\Desktop\Software Design with AI in Cloud\Year_2\software-dev-labs2\.metadata\.plugins\org.eclipse.jdt.core
-1630579643.index
-2386850106.index
-626612610.index
-4167042026.index
-223881628.index
-356327.index
-460187341.index
-468107086.index
-2904636744.index
-923941691.index
-453955381.index
-1039306593.index
-2513093821.index
-3200703938.index
-4184561138.index
-1551969265.index
-3528238001.index
-398925468.index
-2574794399.index
+2075900347.index
+2770819862.index
