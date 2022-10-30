@@ -1,0 +1,120 @@
+/**
+ * 
+ */
+package lab5;
+/**
+ * @author A00279259
+ *
+ */
+public class Pie {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//creating new object of class Human
+		System.out.print("1. ");
+		Human h = new Human();
+		System.out.println(h);
+		//assigning reference h to new object
+		h = new Male();
+		System.out.print("2. ");
+		System.out.println(h);
+		h = new Female();
+		System.out.print("3. ");
+		System.out.println(h);
+		h = new Boy();
+		System.out.print("4. ");
+		System.out.println(h);
+		//try and catch exception error, create new object of class Male and assign to Human
+		try {
+			Male m = (Male) new Human();
+			System.out.println(m);
+		}
+		catch (Exception e) {
+			System.out.print("5. ");
+			//exception will pop as Male inherits from Human, not the reverse
+			System.out.println("Class Cast Exception cought!");
+		}
+		//create new object of Boy
+		Boy b = new Boy();
+		System.out.print("6. ");
+		System.out.println(b.show());
+		//Boy, Girl, Man, Woman prints Female/Male because it doesnt have whoAmI method, it takes the parameters from Male or Female object
+		System.out.print("7. ");
+		doSomething(new Human());
+		System.out.print("8. ");
+		doSomething(new Male());
+		System.out.print("9. ");
+		doSomething(new Female());
+		System.out.println("\tBoy:");
+		doSomething(new Boy());
+		System.out.println("\tGirl:");
+		doSomething(new Girl());
+		System.out.println("\tMan:");
+		doSomething(new Man());
+		System.out.println("\tWoman:");
+		doSomething(new Woman());
+	}
+	
+	public static void doSomething(Human h) {
+		System.out.println(h.whoAmI());
+	}
+}
+
+class Human {
+	public String toString() {
+		return "Human";
+	}
+	public String whoAmI() {
+		return "Human";
+	}
+}
+
+
+class Male extends Human {
+	@Override
+	public String toString() {
+		return "Male";
+	}
+	public String whoAmI() {
+		return "Male";
+	}
+	public String show() {
+		return "I am a man";
+	}
+}
+
+class Boy extends Male {
+}
+
+class Man extends Male {
+	public String toString() {
+		return "Man";
+	}
+}
+
+class Female extends Human {
+	public String toString() {
+		return "Female";
+	}
+	public String whoAmI() {
+		return "Female";
+	}
+}
+
+class Girl extends Female {
+	public String toString() {
+		return "Girl";
+	}
+}
+
+class Woman extends Female {
+	public String toString() {
+		return "Woman";
+	}
+}
+
+
+
+

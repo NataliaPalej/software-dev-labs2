@@ -1,0 +1,138 @@
+package inheritance;
+
+class Art {
+	//Constructor
+	public Art() {
+		System.out.println("Constructor Art");
+	}
+	
+	public void sketch() {
+		System.out.println("Art sketch method");
+	}
+	
+	public String toString() {
+		return "Art toString method";
+	}
+	
+}
+
+class Drawing extends Art {
+	//Constructor
+	public Drawing() {
+		System.out.println("Constructor Drawing");
+	}
+	@Override
+	public void sketch() {
+		System.out.println("Drawing sketch method");
+	}
+	@Override
+	public String toString() {
+		return "Drawing toString method";
+	}
+	
+}
+
+public class Cartoon extends Art {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cartoon c = new Cartoon();
+		System.out.println("main() i: " + c);
+		System.out.println();
+		
+		c.sketchIt(new Art());
+		System.out.println();
+		
+		//sketch iii and iv
+		
+		c.upCasting();
+		System.out.println();
+		
+		c.downCasting();
+		System.out.println();	
+		
+
+		}
+	
+	public Cartoon() {
+		System.out.println("Constructor Cartoon");		
+	}
+	@Override
+	public void sketch() {
+		System.out.println("Cartoon sketch method");
+	}
+	
+	public void tomAndJerry() {
+		System.out.println("Cartoon tomAndJerry");
+	}
+		
+	//Invoking sketchIt method of Art object
+	public void sketchIt(Art a) {
+		a.sketch();
+		
+		if (a instanceof Cartoon) {
+			tomAndJerry();
+		}
+	}
+	
+	public static void upCasting() {
+		Art al = new Art();
+		System.out.println("upCasting i: " + al);
+		System.out.println();
+		Art a2 = new Drawing();
+		System.out.println("upCasting ii: " + a2);
+		System.out.println();
+		Art a3 = new Cartoon();
+		System.out.println("upCasting iii: " + a3);
+		System.out.println();
+		Drawing dl = new Drawing();
+		System.out.println("upCasting iv: " + dl);
+		System.out.println();
+		/**
+		try {
+			Drawing d2 = new Cartoon();
+			System.out.println("upCasting v: " + d2);
+		} catch (Exception e) {
+			System.out.println("ERROR");
+		}
+		**/
+		Cartoon cl = new Cartoon();
+		System.out.println("upCasting: " + cl);
+		System.out.println();			
+	}
+	
+	public static void downCasting() {
+		Art al = new Drawing();
+		System.out.println("downCasting i: " + al);
+		System.out.println();
+		
+		Art dl = (Art) new Drawing();
+		System.out.println("downCasting 2: " + dl);
+		System.out.println();
+		
+		Art a2 = new Cartoon();
+		System.out.println("downCasting (ii) 1: " + a2);
+		System.out.println();
+		
+		Art d2 = (Art) new Drawing();
+		System.out.println("downCasting (ii) 2: " + d2);
+		System.out.println();
+		
+		Art cl = (Art) new Cartoon();
+		System.out.println("downCasting (ii) 3: " + cl);
+		System.out.println();
+		
+		/**
+		Drawing d3 = new Cartoon();
+		System.out.println("downCasting (iii): " + d3);
+		System.out.println();
+		**/
+		
+		
+		
+		
+				
+	}
+	
+}
+

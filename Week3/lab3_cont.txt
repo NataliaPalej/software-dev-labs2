@@ -1,0 +1,357 @@
+package lab3;
+
+import java.util.Scanner;
+
+public class Lab3 {
+
+	public static void main(String[] args) {
+		//preAndPostDifference();
+		//System.out.println();
+		//booleanLogicShortCircutOps();
+		//System.out.println();
+		//booleanBitwiseOps();
+		//compareStrings();
+		//admitToFilm(16, 8);
+		//admitToFilm(8, 16);
+		//ternaryOperator();
+		//switchVowelOrConsonant();
+		//ifMonth();
+		//ifGrade();
+		//switchMathOperation();
+		switchEnumType();
+	}
+	
+	public static void preAndPostDifference() {
+		int x = 5;
+		int y = 10;
+		System.out.println("The value of x is " + x); //returns 5
+		System.out.println("The value of ++x is " + ++x); //returns 6
+		System.out.println("The value of x++ is " + x++); //returns 6
+		System.out.println("The value of x is " + x); //returns 7 as its postincrement from previous statement
+		System.out.println();
+		System.out.println("The value of y is " + y); //returns 10
+		System.out.println("The value of ++y is " + --y); //returns 9
+		System.out.println("The value of y++ is " + y--); //returns 9
+		System.out.println("The value of y is " + y); //returns 8
+	}
+	
+	public static void booleanLogicShortCircutOps() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter num1: ");
+		int num1 = sc.nextInt();
+		System.out.println("Enter num2: ");
+		int num2 = sc.nextInt();
+		
+		if (num1 < 0 && num2++ < 0){ 
+			System.out.println("Output of num2: " + num2);
+			}
+		else if (num1 > 0 && num2++ > 0)   {
+			System.out.println("Output of num2: " + num2);}
+		else if (num1 == 0 || num2++ == 0) {
+			System.out.println("Output of num2: " + num2);
+			}
+		else if (num1 < 0 || num2++ < 0) {
+			System.out.println("Output of num2: " + num2);
+			}		
+	}
+	
+	public static void booleanBitwiseOps(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter num1: ");
+		int num1 = sc.nextInt();
+		System.out.println("Enter num2: ");
+		int num2 = sc.nextInt();
+		
+		if (num1 < 0 & num2++ < 0){ 
+			System.out.println("Output of num2: " + num2);
+			}
+		else if (num1 > 0 & num2++ > 0)   {
+			System.out.println("Output of num2: " + num2);}
+		else if (num1 == 0 | num2++ == 0) {
+			System.out.println("Output of num2: " + num2);
+			}
+		else if (num1 < 0 | num2++ < 0) {
+			System.out.println("Output of num2: " + num2);
+			}
+	}
+	
+	public static void compareStrings() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter s1: ");
+		String s1 = sc.next();
+		System.out.println("Enter s2: ");
+		String s2 = sc.next();
+		//String s1 = "Mary";
+		//String s2 = "Mary";
+		boolean c = (s1==s2);
+		System.out.println("Using == returns " + c);
+		System.out.println("Using equals() returns " + s1.equals(s2));
+		
+		String name1 = "Sean";
+		String name2 = "Sean";
+		boolean b = (name1 == name2);
+		System.out.println("Using == returns " + b); //true
+		
+		String name3 = "John";
+		String name4 = new String("John");
+		boolean a = (name3 == name4);
+		System.out.println("Using == returns " + a);
+	}
+	
+	public static boolean admitToFilm(int x, int y) {
+		if (x > y) {
+			System.out.println("Not old enough!");;
+		}
+		else {
+			System.out.println("You're old enough!");
+		}
+		return true;
+	}
+	
+	public static void ternaryOperator(){
+		boolean isHappy = true;
+		String mood = (isHappy == true) ? "I am happy!" : "I am NOT happy!";
+		System.out.println(mood);
+		
+		/**
+		if (isHappy == true) {
+			System.out.println("I am happy!");
+		}
+		else {
+			System.out.println("I am NOT happy!");
+		}
+		**/
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter value x: ");
+		int x = sc.nextInt();
+		System.out.println("Enter value y: ");
+		int y = sc.nextInt();
+		int minVal;
+		
+		minVal = (x < y) ? x : y;
+		System.out.println("Min value: " + minVal);
+		
+		/**
+		if (x < y) {
+			minVal = x;
+		}
+		else {
+			minVal = y;
+		}
+		System.out.println(minVal);
+		**/
+	}
+	
+	public static void switchVowelOrConsonant() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter a character: ");
+		char letter = in.next().charAt(0);
+		in.close();		
+		boolean isVowel = false;
+		
+		switch(letter)
+		{
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+		case 'A':
+		case 'E':
+		case 'I':
+		case 'O':
+		case 'U': isVowel = true;
+		}
+		
+		if (isVowel == true) {
+			System.out.println(letter + " is vovel");
+		}
+		else
+			System.out.println(letter + " is a consonant");
+	}
+	
+	public static void ifMonth() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter month in a range 1-12: ");
+		int month = in.nextInt();
+		
+		final int JAN = 1;
+		final int FEB = 2;
+		final int MAR = 3;
+		final int APR = 4;
+		final int MAY = 5;
+		final int JUN = 6;
+		final int JUL = 7;
+		final int AUG = 8;
+		final int SEPT = 9;
+		final int OCT = 10;
+		final int NOV = 11;
+		final int DEC = 12;
+		
+		try {
+			if (month == 1) { 
+				System.out.println(JAN);
+			}
+			else if (month == 2 ) {
+				System.out.println(FEB);
+			}
+			else if (month == 3) {
+				System.out.println(MAR);
+			}
+			else if (month == 4) {
+				System.out.println(APR);
+			}
+			else if (month == 5) {
+				System.out.println(MAY);
+			}
+			else if (month == 6) {
+				System.out.println(JUN);
+			}
+			else if (month == 7) {
+				System.out.println(JUL);
+			}
+			else if (month == 8) {
+				System.out.println(AUG);
+			}
+			else if (month == 9) {
+				System.out.println(SEPT);
+			}
+			else if (month == 10) {
+				System.out.println(OCT);
+			}
+			else if (month == 11) {
+				System.out.println(NOV);
+			}
+			else if (month == 12) {
+				System.out.println(DEC);
+			}
+		}
+			catch (Exception e) {
+				System.out.println("Exception caught!");
+			}
+		}
+		
+		/**
+		switch (month) {
+		case 1: System.out.println("January");
+		break;
+		case 2: System.out.println("February");
+		break;
+		case 3: System.out.println("March");
+		break;
+		case 4: System.out.println("April");
+		break;
+		case 5: System.out.println("May");
+		break;
+		case 6: System.out.println("June");
+		break;
+		case 7: System.out.println("July");
+		break;
+		case 8: System.out.println("August");
+		break;
+		case 9: System.out.println("September");
+		break;
+		case 10: System.out.println("October");
+		break;
+		case 11: System.out.println("November");
+		break;
+		case 12: System.out.println("December");
+		break;
+		}
+		
+		
+		if (month <= 0 || month > 12){
+			System.out.println(month + " is out of range 1-12");
+		}
+		**/
+	
+	public static void ifGrade() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter value between 0-100: ");
+		int mark = in.nextInt();
+		
+		try {
+			if (mark < 0 || mark > 100) {
+				System.out.println(mark + " is out of range!");
+			}
+			else if (mark <= 100 && mark >= 70) {
+				System.out.println("You got A");
+			}
+			else if (mark < 70 && mark >= 60) {
+				System.out.println("You got B");
+			}
+			else if (mark < 60 && mark >= 50) {
+				System.out.println("You got C");
+			}
+			else if (mark < 50 && mark >= 40) {
+				System.out.println("You got D");
+			}
+			else if (mark < 40) {
+				System.out.println("You failed");
+			}
+		}
+		catch (Exception e) {
+			System.out.println("Exception caught!");
+		}
+	}
+	
+	public static void switchMathOperation() {
+		double answer = 0.0;
+		boolean charOK = true; 
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter num1: ");
+		double num1 = in.nextDouble();
+		System.out.println("Enter num2: ");
+		double num2 = in.nextDouble();
+		System.out.println("Enter character: ");
+		char operation = in.next().charAt(0);
+		
+		switch (operation) {
+		case '+':
+			answer = num1 + num2;
+			break;
+		case '-':
+			answer = num1 - num2;
+			break;
+		case '*':
+			answer = num1 * num2;
+			break;
+		case '/':
+			answer = num1 / num2;
+			break;
+		}
+		
+		if (charOK == true) {
+			System.out.println(answer);
+		}
+	}
+	
+	enum Direction{
+	       NORTH, SOUTH, EAST, WEST
+	}
+	public static void switchEnumType() {
+		Direction theWay = null;
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter direction N, S, W or E: ");
+		String direction = in.next();
+		direction = direction.toUpperCase();
+		System.out.println(direction);
+		
+	}
+	
+	public static void ifTemperature() {
+		
+	}
+	
+	public static void switchDaysInMonth() {
+		
+	}
+	
+	
+	
+	
+
+}

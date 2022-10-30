@@ -1,0 +1,89 @@
+package lab5;
+import java.util.Scanner;
+
+public class VolumeUserIO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter length: ");
+		int l = in.nextInt();
+		System.out.println("Enter height: ");
+		int h = in.nextInt();
+		System.out.println("Enter width: ");
+		int w = in.nextInt();
+		
+		//calcVolume() = new calcVolume();
+
+	}
+
+}
+
+class Volume{
+	
+	int length;
+	int width;
+	int height;
+	
+	/**
+	 * Constructor
+	 */
+	public Volume() {
+		super();
+	}
+	
+	/**
+	 * Constructor2
+	 */
+	public Volume(int length, int width, int height) {
+		super();
+		this.length = length;
+		this.width = width;
+		this.height = height;
+	}
+
+	/**
+	 * @return the length
+	 */
+	public int getLength() {
+		return length;
+	}
+	/**
+	 * @param length the length to set
+	 */
+	public void setLength(int length) {
+		this.length = length;
+	}
+	/**
+	 * @return the width
+	 */
+	public int getWidth() {
+		return width;
+	}
+	/**
+	 * @param width the width to set
+	 */
+	public void setWidth(int width) {
+		this.width = width;
+	}
+	/**
+	 * @return the height
+	 */
+	public int getHeight() {
+		return height;
+	}
+	/**
+	 * @param height the height to set
+	 */
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	
+	public int calcVolume() {
+		return length*width*height;
+	}
+	
+	public String toString() {
+		return "Length: " + length + "\nWidth: " + width + "\nHeight: " + height;
+	}
+}
