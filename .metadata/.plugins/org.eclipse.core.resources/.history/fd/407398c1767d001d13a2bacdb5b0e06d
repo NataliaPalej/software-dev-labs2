@@ -1,0 +1,28 @@
+package agile;
+
+import java.util.Scanner;
+
+public class LeapYear {
+	
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		
+	}
+	
+	public static boolean leapYear(boolean year){
+		boolean result = true;
+		return result;
+	}
+	
+	public static boolean validYear(int year){
+		boolean result = true;
+		if (year < 0){
+			result = false;
+			return result;
+		}
+		else {
+			return result;
+		}
+	}
+
+}
