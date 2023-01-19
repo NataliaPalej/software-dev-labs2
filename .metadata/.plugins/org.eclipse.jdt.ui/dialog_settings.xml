@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="JavaSE-1.8" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
+	<item value="C:\Users\Natalia\Desktop\Software Design with AI in Cloud\Year_2\software-dev-labs2\.Semester2" key="org.eclipse.jdt.ui.last.external.project"/>
 	<section name="SelfEncapsulateFieldWizard">
 		<item value="false" key="GenerateJavadoc"/>
 	</section>

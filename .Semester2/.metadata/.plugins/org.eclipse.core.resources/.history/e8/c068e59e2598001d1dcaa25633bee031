@@ -1,0 +1,50 @@
+package lab1_exceptions;
+
+public class ExceptionsLab1 {
+
+	public static void main(String[] args) {
+		
+		testMethodA(null);
+		testMethodB();
+
+	}
+
+
+public static void testMethodA(String a){
+	try{
+		System.out.println("Try block OK: " + a);
+	}
+	catch (Exception e){
+		System.out.println("Catch Exception" + e);
+	}
+	finally{
+		System.out.println("OK from finally");
+	}
+}
+
+public static String testMethodB(){
+	try{
+		System.out.println("Try block");
+	}
+	catch (Exception e){
+		System.out.println("Exception: " + e);
+	}
+	finally{
+		System.out.println("Finally section");
+	}
+	return null;
+}
+
+public String testMethodC(){
+	try{
+		return 12;
+	}
+	catch (Exception e){
+		return "Exception";
+	}
+	finally {
+		return "Finally";
+	}
+}
+
+}
