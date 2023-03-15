@@ -1,15 +1,17 @@
 package week8;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class CollectionsPractice {
 	
 	public static void main(String[] args) {
+		//mapTreeMap();
 		mapHashMap();
 	}
 	
-	public static void mapHashMap() {
+	public static void mapTreeMap() {
 		// TreeMap sorts the key:values
 		Map<String, Integer> map = new TreeMap<>();
 		map.put("Ford", 2019);
@@ -44,12 +46,21 @@ public class CollectionsPractice {
 			}
 			count++;
 		}
-		
-		
 	}
 	
-	public static void mapTreeMap() {
-		
+	public static void mapHashMap() {
+		Map<String, Integer> hashMap = new HashMap<>();
+		hashMap.put("Ford", 2019);
+		hashMap.put("Audi", 2015);
+		hashMap.put("Polo", 2023);
+		hashMap.put("Beetle", 2012);
+		System.out.println(hashMap);
+		System.out.println("containsKey: " + hashMap.containsKey("Ford"));
+		System.out.println("containsValue: " + hashMap.containsValue(2023));
+		hashMap.remove("Polo");
+		System.out.println(hashMap);
+		hashMap.replace("Audi", 2016);
+		System.out.println(hashMap);
 	}
 	
 	public static void exceptions1() {
