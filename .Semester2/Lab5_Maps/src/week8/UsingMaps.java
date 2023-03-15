@@ -6,8 +6,7 @@ import java.util.TreeMap;
 public class UsingMaps {
 	
 	public static void main(String[] args) {
-		
-		//demoTreeMapFunctions();
+		demoTreeMapFunctions();
         
 	}
 	
@@ -30,7 +29,7 @@ public class UsingMaps {
 //			System.out.println("Chris: " +map.containsKey("Chris"));
 //			System.out.println("Mike: " +map.containsKey("Mike"));
 			//TODO
-			//Add in check for Amy
+			System.out.println("Amy: " + map.containsKey("Amy"));
 			
 			
 			//Check if the value exists
@@ -40,8 +39,8 @@ public class UsingMaps {
 //			System.out.println("12: "+map.containsValue(12));
 			
 			//TODO
-			//Add in check for 30
-			
+			System.out.println("30: " + map.containsValue(30));
+			 
 			// Enhanced for loop to print the keys
 //			System.out.println("The keys are ====================");
 //			for(String name:map.keySet()) {
@@ -63,12 +62,38 @@ public class UsingMaps {
 //	        map.remove("John");
 	        
 	        
-			// Replace a value for a particular key
-//	        map.replace("Mary", 22);
+			//Replace a value for a particular key
+	        //map.replace("Mary", 22);
+	        //System.out.println(map);
 	        
 	        //TODO
 	        // Output the key
+			
+			int count = 0;
+			
+			System.out.print("Keys: ");
+			int keySize = map.keySet().size();
+			for(String name : map.keySet()) {
+				System.out.print(name);
+				if (count < keySize - 1) {
+			        System.out.print(", ");
+			    }
+			    count++;
+			}
+			
 	        // Output the values
+			System.out.print("\nValues: ");
+			count = 0;
+			int valSize = map.values().size();
+			for (Integer value : map.values()) {
+				System.out.print(value);
+				if (count < valSize - 1) {
+			        System.out.print(", ");
+			    }
+			    count++;
+			}
 	        // Output the map
+			System.out.println();
+			System.out.println(map);
 	}
 }
