@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Stack;
 
 public class ListSetPractice {
 	
 	public static void main(String[] args) {
 		//factoryMethods();
-		listOfNames();
-		
+		//listOfNames();
+		stacks();
 	}
 	
 	
@@ -73,7 +74,22 @@ public class ListSetPractice {
 	}
 	
 	public static void stacks() {
+		Stack<String> myStack = new Stack<>();
+		myStack.push("Andrea");
+		myStack.push("Barbara");
+		myStack.push("Caroline");
+		System.out.println(myStack);
+		// peek() returns the top element of the stack without removing it from the stack
+		System.out.println("myStack peek: " + myStack.peek());
+		// pop() removes the top element from the stack
+		System.out.println("myStack pop: " + myStack.pop());
+		System.out.println(myStack);
 		
+		try {
+			//myStack.push(14);
+		} catch (Exception e) {
+			System.out.println("Error: cannot add int arguments to the stack of type String");
+		}
 	}
 	
 	public static void linkedLists() {
