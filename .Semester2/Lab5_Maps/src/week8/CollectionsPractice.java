@@ -1,6 +1,10 @@
 package week8;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -8,7 +12,16 @@ public class CollectionsPractice {
 	
 	public static void main(String[] args) {
 		//mapTreeMap();
-		mapHashMap();
+		//mapHashMap();
+		try {
+			exceptions1();
+		} catch (IOException e) {
+			System.out.println("exception1(): " + e);
+		}
+		
+		System.out.println();
+		
+		listOfFruits();
 	}
 	
 	public static void mapTreeMap() {
@@ -63,16 +76,34 @@ public class CollectionsPractice {
 		System.out.println(hashMap);
 	}
 	
-	public static void exceptions1() {
-		
+	public static void exceptions1() throws IOException {
+		exceptions2();
 	}
 	
-	public static void exceptions2() {
-		
+	public static void exceptions2() throws IOException{
+		System.out.println("exceptions2() :: IOException");
+		throw new IOException();
 	}
 	
 	public static void listOfFruits() {
-		
+		List<String> list = new ArrayList<>();
+		list.add("Apple");
+		list.add("Banana");
+		list.add("Cherry");
+		list.add("Elderberry");
+		list.add("Fig");
+		System.out.println(list);
+		list.add("Damson");
+		System.out.println(list);
+		Collections.sort(list);
+		System.out.println(list);
+		System.out.println("Size: " + list.size());
+		System.out.println("containsOf: " + list.contains("Pear"));
+		list.remove("Elderberry");
+		System.out.println(list);
+		System.out.println("isEmpty: " + list.isEmpty());
+		list.set(4, "Cherry");
+		System.out.println(list);
 	}
 
 }
