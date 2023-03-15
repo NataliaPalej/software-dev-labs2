@@ -27,5 +27,6 @@ class MyException extends Exception{
 	public static void c() throws MyException {
 		System.out.println("c()");
 		System.out.println("An I/O exception occurred");
+		throw new MyException();
 	}
 }
