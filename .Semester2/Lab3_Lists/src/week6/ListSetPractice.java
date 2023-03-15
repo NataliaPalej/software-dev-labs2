@@ -5,7 +5,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
+import java.util.TreeSet;
 
 public class ListSetPractice {
 	
@@ -13,7 +15,8 @@ public class ListSetPractice {
 		//factoryMethods();
 		//listOfNames();
 		//stacks();
-		linkedLists();
+		//linkedLists();
+		treesets();
 	}
 	
 	
@@ -112,7 +115,13 @@ public class ListSetPractice {
 	}
 	
 	public static void treesets() {
-		
+		Set<String> myTreeSet = new TreeSet<>();
+		myTreeSet.add("Barbara");
+		myTreeSet.add("Caroline");
+		myTreeSet.add("Andrea");
+		System.out.println(myTreeSet);
+		// What do you notice?
+		// treeSet automatically sorts the inputs alphabetically
 	}
 	
 	public static void hashSet() {
