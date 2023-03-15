@@ -1,3 +1,7 @@
+.Semester2/.metadata/
+.Semester2/.recommenders/
+
+
 # Ignore calculator-javascript that has private repo
 calculator-javascript/
 
