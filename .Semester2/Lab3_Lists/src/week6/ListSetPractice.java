@@ -2,12 +2,14 @@ package week6;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ListSetPractice {
 	
 	public static void main(String[] args) {
-		factoryMethods();
+		//factoryMethods();
+		listOfNames();
 	}
 	
 	public static void factoryMethods() {
@@ -21,9 +23,38 @@ public class ListSetPractice {
 		System.out.println("asList: " + asList);
 		
 		
+		try {
+			asList.add("D");
+			System.out.println("asList with D: " + asList);
+		} catch (Exception e) {
+			System.out.println("Can't add to list, error: " + e);
+		}
+		
+		System.out.println("listOf asList: " + List.of(asList));
+		System.out.println("listOf myArray: " + List.of(myArray));
+		System.out.println("listCopyOf asList: " + List.copyOf(asList));
 	}
 	
 	public static void listOfNames() {
+		List<String> myList = new ArrayList<>();
+		myList.add("Amy");
+		myList.add("Betty");
+		myList.add("Doris");
+		myList.add("Enda");
+		myList.add("Feena");
+		System.out.println(myList);
+		myList.add("Connor");
+		System.out.println(myList);
+		Collections.sort(myList);
+		System.out.println(myList);
+		System.out.println("myList size: " + myList.size());
+		System.out.println("myList.contains Mary" + myList.contains("Mary"));
+		myList.remove("Betty");
+		System.out.println(myList);
+		System.out.println("isEmpty: " + myList.isEmpty());
+		myList.set(4, "Doris");
+		System.out.println(myList);
+		
 		
 	}
 	
