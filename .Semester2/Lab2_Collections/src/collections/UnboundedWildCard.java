@@ -11,6 +11,7 @@ public class UnboundedWildCard {
 			System.out.println(o);
 		}
 		list.add("test");
+		System.out.println(list);
 	}
 
 	public static void main(String[] args) {
