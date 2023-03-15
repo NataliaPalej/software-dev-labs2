@@ -3,6 +3,7 @@ package week6;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -11,7 +12,8 @@ public class ListSetPractice {
 	public static void main(String[] args) {
 		//factoryMethods();
 		//listOfNames();
-		stacks();
+		//stacks();
+		linkedLists();
 	}
 	
 	
@@ -79,9 +81,9 @@ public class ListSetPractice {
 		myStack.push("Barbara");
 		myStack.push("Caroline");
 		System.out.println(myStack);
-		// peek() returns the top element of the stack without removing it from the stack
+		// peek() returns the top (last) element of the stack without removing it from the stack
 		System.out.println("myStack peek: " + myStack.peek());
-		// pop() removes the top element from the stack
+		// pop() removes the top (last) element from the stack
 		System.out.println("myStack pop: " + myStack.pop());
 		System.out.println(myStack);
 		
@@ -93,7 +95,20 @@ public class ListSetPractice {
 	}
 	
 	public static void linkedLists() {
-		
+		LinkedList<String> myLinkedList = new LinkedList<>();
+		myLinkedList.add("Barbara");
+		System.out.println(myLinkedList);
+		myLinkedList.addFirst("Andrea");
+		System.out.println(myLinkedList);
+		myLinkedList.addLast("Caroline");
+		System.out.println(myLinkedList);
+		myLinkedList.removeFirst();
+		System.out.println(myLinkedList);
+		// peek() returns first element of the linkedList
+		System.out.println("peek() -> " + myLinkedList.peek() + " -> " + myLinkedList);
+		// pop() removes first element of the linkedList
+		System.out.println("pop() -> " + myLinkedList.pop() + " -> " + myLinkedList);
+		System.out.println(myLinkedList);
 	}
 	
 	public static void treesets() {
