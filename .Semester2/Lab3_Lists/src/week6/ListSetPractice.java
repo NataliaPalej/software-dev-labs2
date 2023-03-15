@@ -10,7 +10,9 @@ public class ListSetPractice {
 	public static void main(String[] args) {
 		//factoryMethods();
 		listOfNames();
+		
 	}
+	
 	
 	public static void factoryMethods() {
 		String[] myArray = {"A", "B", "C"};
@@ -42,20 +44,32 @@ public class ListSetPractice {
 		myList.add("Doris");
 		myList.add("Enda");
 		myList.add("Feena");
-		System.out.println(myList);
+		//System.out.println(myList);
 		myList.add("Connor");
+		//System.out.println(myList);
+		Collections.sort(myList);
+		//System.out.println(myList);
+		//System.out.println("myList size: " + myList.size());
+		//System.out.println("myList.contains Mary" + myList.contains("Mary"));
+		myList.remove("Betty");
+		//System.out.println(myList);
+		//System.out.println("isEmpty: " + myList.isEmpty());
+		myList.set(4, "Doris");
+		System.out.println(myList);	
+		
+		//for (String i : myList) {
+		//	i = i + " Bloggs";
+		//	System.out.println(i);
+		//}
+		
+		// Using the API, add a surname “Bloggs” to each Name
+		myList.replaceAll(i -> i + " Bloggs");
+		System.out.println(myList);
+		System.out.println("Position 3: " + myList.get(2));
+		myList.set(4, "Andrea");
 		System.out.println(myList);
 		Collections.sort(myList);
 		System.out.println(myList);
-		System.out.println("myList size: " + myList.size());
-		System.out.println("myList.contains Mary" + myList.contains("Mary"));
-		myList.remove("Betty");
-		System.out.println(myList);
-		System.out.println("isEmpty: " + myList.isEmpty());
-		myList.set(4, "Doris");
-		System.out.println(myList);
-		
-		
 	}
 	
 	public static void stacks() {
