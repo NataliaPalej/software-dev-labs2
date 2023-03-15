@@ -1,5 +1,10 @@
+# Ignore metadata and recommenders folder within .Semester2 folder
 .Semester2/.metadata/
 .Semester2/.recommenders/
+
+# Ignore .metadata and .recommenders
+/.metadata/
+/.recommenders/
 
 
 # Ignore calculator-javascript that has private repo
