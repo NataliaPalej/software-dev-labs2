@@ -1,13 +1,18 @@
 package week10.code;
 
-public class SomeGenericClass {
+public class SomeGenericClass<T> {
 	
-	public void add() {
-		
+	// Declare T as a generic
+	private T t;
+	
+	// Add method acts as setter
+	public void add(T t) {
+		this.t = t;
 	}
 	
-	public void get() {
-		
+	// Getter method
+	public T get() {
+		return t;
 	}
 
 }
