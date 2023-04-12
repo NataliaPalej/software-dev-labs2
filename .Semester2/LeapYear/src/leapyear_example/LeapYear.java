@@ -26,9 +26,11 @@ import java.util.Scanner;
 public class LeapYear {
 	public static void main(String[] args) {
 		
+		Scanner in = new Scanner(System.in);
+		
 		try {
 			LeapYear x = new LeapYear();
-			Scanner in = new Scanner(System.in);
+			
 			
 			System.out.println("Enter a year: ");
 			int year = in.nextInt();
@@ -43,7 +45,7 @@ public class LeapYear {
 		catch (InputMismatchException | LeapYearException e) {
 			System.out.println("Error, only numbers allowed!");
 		}
-		
+		in.close();
 	}
 	
 	public boolean validYear(int year) throws LeapYearException {
