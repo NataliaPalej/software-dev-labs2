@@ -1,9 +1,10 @@
 package week9.code;
 
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
-import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -16,7 +17,9 @@ public class CodePractice {
 		// Q2
 		//set();
 		// Q3
-		map();
+		//map();
+		// Q4
+		listOfFruits();
 	}
 	
 	public static void set() {
@@ -62,6 +65,26 @@ public class CodePractice {
 	}
 	
 	public static void listOfFruits() {
+		List<String> list = new ArrayList<>();
+		list.add("Apple");
+		list.add("Banana");
+		list.add("Cherry");
+		list.add("Elderberry");
+		list.add("Fig");
+		list.add("Damson");
+		System.out.println(list);
+		// Instead of hard coding the index, use collections API to sort the list
+		Collections.sort(list);
+		System.out.println(list);
+		System.out.println("Size: " + list.size());
+		System.out.println("Contains \"Pear\": " + list.contains("Pear"));
+		list.remove("Elderberry");
+		System.out.println(list);
+		System.out.println("Is empty: " + list.isEmpty());
+		// Replace index of "Fig" with Cherry
+		list.set(list.indexOf("Fig"), "Cherry");
+		System.out.println(list);
+		
 		
 	}
 
