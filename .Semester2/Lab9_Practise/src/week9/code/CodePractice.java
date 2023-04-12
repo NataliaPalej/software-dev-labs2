@@ -3,8 +3,10 @@ package week9.code;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class CodePractice {
 
@@ -13,7 +15,8 @@ public class CodePractice {
 		//exceptions1();
 		// Q2
 		//set();
-		
+		// Q3
+		map();
 	}
 	
 	public static void set() {
@@ -32,11 +35,17 @@ public class CodePractice {
 	}
 	
 	public static void map() {
-		Map<String, Integer> map = new HashMap<>();
+		// TreeMap or LinkedHashMap sorts automatically
+		Map<String, Integer> map = new TreeMap<>();
 		map.put("Ford", 2019);
 		map.put("Audi", 2015);
 		map.put("Polo", 2023);
 		map.put("Beetle", 2012);
+		System.out.println(map);
+		System.out.println("Contains \"Ford\": " + map.containsKey("Ford"));
+		System.out.println("Contains \"2023\": " + map.containsValue(2023));
+		map.remove("Polo");
+		System.out.println(map);
 	}
 	
 	public static void exceptions1() {
