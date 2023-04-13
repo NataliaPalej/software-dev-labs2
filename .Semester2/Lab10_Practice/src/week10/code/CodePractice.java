@@ -1,6 +1,8 @@
 package week10.code;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -18,7 +20,10 @@ public class CodePractice {
 		//generics();
 		
 		// Q3
-		map();
+		//map();
+		
+		// Q4
+		listOfAnimals();
 	}
 	
 	public static void generics() {
@@ -62,7 +67,22 @@ public class CodePractice {
 	}
 	
 	public static void listOfAnimals() {
+		List<String> list = new ArrayList<>();
+		list.add("Ape");
+		list.add("Bee");
+		list.add("Cat");
+		list.add("Dog");
+		list.add("Elephant");
+		list.add("Fox");
 		
+		System.out.println(list);
+		System.out.println("Size: " + list.size());
+		System.out.println("Contains \"Panda\": " + list.contains("Panda"));
+		list.remove("Elephant");
+		System.out.println(list);
+		System.out.println("Is empty: " + list.isEmpty());
+		list.set(list.indexOf("Fox"), "Cat");
+		System.out.println(list);
 	}
 	
 	public static void ex1() throws IOException {
