@@ -28,7 +28,7 @@ public class CodePractice {
 		//listOfAnimals();
 		
 		// Q5
-		set();
+		//set();
 	}
 	
 	public static void generics() {
@@ -110,5 +110,4 @@ public class CodePractice {
 		set.removeAll(set);
 		System.out.println("Is empty: " + set.isEmpty());
 	}
-
 }
