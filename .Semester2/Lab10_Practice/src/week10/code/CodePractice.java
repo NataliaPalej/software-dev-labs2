@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class CodePractice {
 
@@ -23,7 +25,10 @@ public class CodePractice {
 		//map();
 		
 		// Q4
-		listOfAnimals();
+		//listOfAnimals();
+		
+		// Q5
+		set();
 	}
 	
 	public static void generics() {
@@ -90,7 +95,20 @@ public class CodePractice {
 	}
 	
 	public static void set() {
+		Set<String> set = new TreeSet();
+		set.add("10");
+		set.add("20");
+		set.add("30");
+		set.add("40");
 		
+		System.out.println(set);
+		set.add("60");
+		System.out.println(set);
+		set.remove("30");
+		System.out.println(set);
+		System.out.println("Contains \"50\": " + set.contains("50"));
+		set.removeAll(set);
+		System.out.println("Is empty: " + set.isEmpty());
 	}
 
 }
