@@ -28,7 +28,10 @@ public class CodePractice {
 		//listOfAnimals();
 		
 		// Q4
-		set();
+		//set();
+		
+		// Q5
+		generics();
 	}
 	
 	public static void exceptions1() throws IOException {
@@ -108,7 +111,13 @@ public class CodePractice {
 	}
 	
 	public static void generics() {
+		SomeGenericClass<String> genS = new SomeGenericClass<>();
+		SomeGenericClass<Integer> genI = new SomeGenericClass<>();
+		
+		genS.add("Holiday");
+		System.out.println(genS.get());
+		genI.add(12);
+		System.out.println(genI.get());
 		
 	}
-
 }
