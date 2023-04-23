@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class CodePractice {
 
@@ -91,7 +93,18 @@ public class CodePractice {
 	}
 	
 	public static void set() {
-		
+		Set<String> set = new TreeSet<>();
+		set.add("10");
+		set.add("20");
+		set.add("30");
+		set.add("40");
+		System.out.println(set);
+		set.add("60");
+		set.remove("30");
+		System.out.println(set);
+		System.out.println("Contains \"50\": " + set.contains("50"));
+		set.removeAll(set);
+		System.out.println("Is empty: " + set.isEmpty());
 	}
 	
 	public static void generics() {
